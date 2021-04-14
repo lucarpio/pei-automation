@@ -28,6 +28,7 @@ Feature: Alta de division
         And Visualiza lista de divisiones
         # https://futbolveterano.herokuapp.com/es/admin/divisions
         # /html/body/div/div/section/section/div[1]/h1 CONTAINS Lista de Divisiones
+        Then valida la division creada
 
         Examples:
             | nombre    | Apellido  |

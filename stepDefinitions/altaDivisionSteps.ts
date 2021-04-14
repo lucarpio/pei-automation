@@ -50,3 +50,15 @@ Then(/^Visualiza lista de divisiones$/,() => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/divisions');
     expect(division_page.divisionTituloLabel().getText()).to.be.contains('Lista de Divisiones');
 });
+
+Then(/^valida la division creada$/,() => {
+    let array = browser.$$('/html/body/div/div/section/section/div[2]/table/tbody/tr');
+    let indice;
+    for (let i = 0; i < array.length; i++) {
+        if(array[i].getText().includes("Christian"+random)){
+            indice = i;
+            break;
+        }
+    }
+    expect((array[indice]).isExisting());
+});
