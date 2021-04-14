@@ -24,38 +24,38 @@ Then(/^selecciona nueva division$/, () => {
     division_page.divisionNuevaButton().click();
 });
 
-Then(/^visualiza el formulario division$/,() => {
+Then(/^visualiza el formulario division$/, () => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/divisions/new');
 });
 
 When(/^completa los datos nombre y descripcion$/, () => {
-    division_page.divisionNombreInput().setValue("Christian"+random);
-    division_page.divisionDescInput().setValue("Descripcion"+random);
-    browser.$('#division_categories_'+ faker.random.number(11)).click();
+    division_page.divisionNombreInput().setValue("Christian" + random);
+    division_page.divisionDescInput().setValue("Descripcion" + random);
+    browser.$('#division_categories_' + faker.random.number(11)).click();
 });
 
-Then(/^se Crea la division$/,() => {
+Then(/^se Crea la division$/, () => {
     division_page.divisionCrearButton().click();
 });
 
-Then(/^previsualiza datos de division$/,() => {
+Then(/^previsualiza datos de division$/, () => {
     expect(division_page.divisionRevisionLabel().getText()).to.be.contains('Division Creada');
 });
 
-Then(/^Vuelve a lista de divisiones$/,() => {
+Then(/^Vuelve a lista de divisiones$/, () => {
     division_page.divisionBackButton().click()
 });
 
-Then(/^Visualiza lista de divisiones$/,() => {
+Then(/^Visualiza lista de divisiones$/, () => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/divisions');
     expect(division_page.divisionTituloLabel().getText()).to.be.contains('Lista de Divisiones');
 });
 
-Then(/^valida la division creada$/,() => {
+Then(/^valida la division creada$/, () => {
     let array = browser.$$('/html/body/div/div/section/section/div[2]/table/tbody/tr');
     let indice;
     for (let i = 0; i < array.length; i++) {
-        if(array[i].getText().includes("Christian"+random)){
+        if (array[i].getText().includes("Christian" + random)) {
             indice = i;
             break;
         }

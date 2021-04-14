@@ -31,12 +31,12 @@ Feature: Alta de division
         Then valida la division creada
 
         Examples:
-            | nombre    | Apellido  |
-            | Christian | Ape       |
+            | nombre    | Apellido |
+            | Christian | Ape      |
 
 
-            # browser.$$('//*[@id="new_division"]/div[1]/div[3]/span')[1]
-            # LISTA DE LOS CHECKBOX
-            # //*[@id="new_division"]/div[1]/div[3]/span[1]
-            # //*[@id="new_division"]/div[1]/div[3]/span[2]
-            # //*[@id="new_division"]/div[1]/div[3]/span[3]
+# browser.$$('//*[@id="new_division"]/div[1]/div[3]/span')[1]
+# LISTA DE LOS CHECKBOX
+# //*[@id="new_division"]/div[1]/div[3]/span[1]
+# //*[@id="new_division"]/div[1]/div[3]/span[2]
+# //*[@id="new_division"]/div[1]/div[3]/span[3]

@@ -28,7 +28,7 @@ export class DivisionPO {
     public divisionNombreInput(): WebdriverIO.Element {
         return browser.$(this.division_nombre_input);
     }
-    
+
     public divisionDescInput(): WebdriverIO.Element {
         return browser.$(this.division_descripcion_input);
     }

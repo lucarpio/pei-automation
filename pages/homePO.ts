@@ -21,7 +21,7 @@ export class HomePO {
     public homeEmailInput(): WebdriverIO.Element {
         return browser.$(this.home_email_input);
     }
-    
+
     public homePasswordInput(): WebdriverIO.Element {
         return browser.$(this.home_password_input);
     }

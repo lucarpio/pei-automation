@@ -22,26 +22,26 @@ Then(/^Selecciona nuevo miembro$/, () => {
     prensa_page.prensaNuevoMiembroButton().click();
 });
 
-Then(/^visualiza el formulario$/,() => {
+Then(/^visualiza el formulario$/, () => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/others/new');
 });
 
 When(/^Completa los datos "(.*?)", "(.*?)"$/, (nom: string, apellido: string) => {
-    prensa_page.prensaNombreInput().setValue(nom+faker.random.number(999));
-    prensa_page.prensaApellidoInput().setValue(apellido+faker.random.number(999));
+    prensa_page.prensaNombreInput().setValue(nom + faker.random.number(999));
+    prensa_page.prensaApellidoInput().setValue(apellido + faker.random.number(999));
     prensa_page.prensaDniInput().setValue(faker.random.number(9999999));
-    prensa_page.prensaEmailInput().setValue("correo"+random+"@mail.com");
+    prensa_page.prensaEmailInput().setValue("correo" + random + "@mail.com");
     prensa_page.prensaTelfInput().setValue(random);
 });
 
-Then(/^Se Crea el miembro$/,() => {
+Then(/^Se Crea el miembro$/, () => {
     prensa_page.prensaCrearButton().click();
 });
 
-Then(/^Vuelve a lista de miembros$/,() => {
+Then(/^Vuelve a lista de miembros$/, () => {
     browser.$('/html/body/div/div/section/section/a[3]').click();
 });
 
-Then(/^Visualiza lista de prensa$/,() => {
+Then(/^Visualiza lista de prensa$/, () => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/others');
 });

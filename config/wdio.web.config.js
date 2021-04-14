@@ -80,7 +80,7 @@ exports.config = {
     afterStep: function (scenario) {
         browser.takeScreenshot();
     },
-    
+
     afterScenario: function () {
         browser.reloadSession()
     },

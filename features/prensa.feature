@@ -29,5 +29,5 @@ Feature: Alta de personal
         # https://futbolveterano.herokuapp.com/es/admin/others
 
         Examples:
-            | nombre    | Apellido  |
-            | Christian | Ape       |
+            | nombre    | Apellido |
+            | Christian | Ape      |
