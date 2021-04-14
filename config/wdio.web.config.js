@@ -13,7 +13,8 @@ exports.config = {
     debug: false,
     specs: [
         './features/futbol.feature',
-        './features/dashboard.feature'
+        './features/dashboard.feature',
+        './features/prensa.feature'
     ],
 
     reporters: ['allure', 'spec'],
@@ -59,7 +60,8 @@ exports.config = {
         timeout: 5 * 60 * 60000,
         require: [
             './typescript/stepDefinitions/administracionSteps.js',
-            './typescript/stepDefinitions/dashboardSteps.js'
+            './typescript/stepDefinitions/dashboardSteps.js',
+            './typescript/stepDefinitions/altaPrensaSteps.js'
         ]
     },
 

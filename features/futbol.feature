@@ -1,4 +1,4 @@
-@pei @run
+# @pei @run
 Feature: Login a la aplicación como administrador
     Como usuario administrador de la liga de futbol
     Ingreso a la aplicación

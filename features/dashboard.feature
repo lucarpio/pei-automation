@@ -1,10 +1,10 @@
-@pei @run
+# @pei @run
 Feature: Se testea la aplicacion
 
     Background: Se inicia sesion como administrador
         Given el usuario se logueo correctamente con el mail "test-admin@baufest.com" y la contraseña "baufest123"
 
-    @Dashboard
+    @dashboard
     Scenario: Validacion de pagina dashboard para usuario administrador
 
         When se muestra el dashboard
