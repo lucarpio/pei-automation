@@ -1,6 +1,3 @@
-# @run
-
-
 Feature: Alta de personal
 
     Nueva alta personal
@@ -8,7 +5,7 @@ Feature: Alta de personal
     Background: Se inicia sesion como administrador
         Given el usuario se logueo correctamente con el mail "test-admin@baufest.com" y la contraseña "baufest123"
 
-    @alta_personal @run
+    @alta_personal
     Scenario Outline: Se da de alta a personal
 
         When Selecciona el boton personal

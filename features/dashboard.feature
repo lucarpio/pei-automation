@@ -1,4 +1,3 @@
-# @pei @run
 Feature: Se testea la aplicacion
 
     Background: Se inicia sesion como administrador

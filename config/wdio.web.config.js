@@ -14,7 +14,8 @@ exports.config = {
     specs: [
         './features/futbol.feature',
         './features/dashboard.feature',
-        './features/prensa.feature'
+        './features/prensa.feature',
+        './features/division.feature'
     ],
 
     reporters: ['allure', 'spec'],
@@ -61,7 +62,8 @@ exports.config = {
         require: [
             './typescript/stepDefinitions/administracionSteps.js',
             './typescript/stepDefinitions/dashboardSteps.js',
-            './typescript/stepDefinitions/altaPrensaSteps.js'
+            './typescript/stepDefinitions/altaPrensaSteps.js',
+            './typescript/stepDefinitions/altaDivisionSteps.js'
         ]
     },
 

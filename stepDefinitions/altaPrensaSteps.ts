@@ -22,7 +22,7 @@ Then(/^Selecciona nuevo miembro$/, () => {
     prensa_page.prensaNuevoMiembroButton().click();
 });
 
-Then(/^Visualiza el formulario$/,() => {
+Then(/^visualiza el formulario$/,() => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/others/new');
 });
 
@@ -45,4 +45,3 @@ Then(/^Vuelve a lista de miembros$/,() => {
 Then(/^Visualiza lista de prensa$/,() => {
     expect(browser.getUrl()).to.be.equal('https://futbolveterano.herokuapp.com/es/admin/others');
 });
-
